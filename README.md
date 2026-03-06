@@ -86,6 +86,5 @@ Feel free to contribute by submitting issues or pull requests. For major changes
 
 - [Scikit-learn Documentation]
 - [Flask Documentation]
-- [Heroku Documentation]
 
 ---
