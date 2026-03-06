@@ -1,0 +1,6 @@
+flask>=2.2.0
+pandas
+scikit-learn
+numpy
+gunicorn
+Jinja2>=3.0
