@@ -48,6 +48,7 @@ The project follows these key steps:
 - Flask
 - scikit-learn
 - Pandas
+- Heroku CLI (for deployment)
 
 ### Installation
 
@@ -69,7 +70,29 @@ The project follows these key steps:
 
 4. Open your browser and go to `http://localhost:5000` to access the web app.
 
+### Deployment on Heroku
 
+To deploy the app on Heroku, follow these steps:
+
+1. Login to Heroku:
+   ```bash
+   heroku login
+   ```
+
+2. Create a new Heroku app:
+   ```bash
+   heroku create your-app-name
+   ```
+
+3. Push your code to Heroku:
+   ```bash
+   git push heroku main
+   ```
+
+4. Open the app in your browser:
+   ```bash
+   heroku open
+   ```
 
 ## Future Enhancements
 
@@ -84,8 +107,8 @@ Feel free to contribute by submitting issues or pull requests. For major changes
 
 ## Acknowledgments
 
-- [Scikit-learn Documentation]
-- [Flask Documentation]
+- [Scikit-learn Documentation](https://scikit-learn.org/stable/documentation.html)
+- [Flask Documentation](https://flask.palletsprojects.com/)
+- [Heroku Documentation](https://devcenter.heroku.com/)
 
-
-----
+---
