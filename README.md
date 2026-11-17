@@ -1,114 +1,63 @@
-# Diabetes Prediction
+# DiaCheck — Diabetes Risk Prediction
 
-This repository contains an end-to-end machine learning project aimed at predicting the likelihood of diabetes based on user-provided health data. The project demonstrates the full machine learning pipeline from data gathering to model deployment using a Flask web application hosted on Heroku.
+A machine-learning web application that estimates diabetes risk from user-provided health indicators. The project demonstrates a complete introductory ML workflow, from data exploration and preprocessing to model evaluation and a Flask-based prediction interface.
 
-## Project Overview
+> **Important:** This is an educational prediction project, not a medical diagnostic tool. Predictions should not be used to make healthcare decisions.
 
-The goal of this project is to create a seamless process for predicting diabetes by building a machine learning model that analyzes various health parameters. The web application takes user input, processes the data through the model, and provides the prediction result on a new page.
+## Project overview
 
-## Project Objectives
+DiaCheck accepts health-related inputs and passes them through a trained scikit-learn model to generate a binary prediction. The documented input fields include pregnancies, glucose, blood pressure, skin thickness, insulin, BMI, diabetes pedigree function and age.
 
-The project follows these key steps:
+## Workflow
 
-1. **Data Gathering**: Collected relevant medical data from various sources, including public datasets.
-2. **Descriptive Analysis**: Explored the dataset to understand the underlying patterns and trends.
-3. **Data Visualizations**: Created insightful visualizations to represent key relationships in the data.
-4. **Data Preprocessing**: Cleaned and transformed the data for use in the machine learning model.
-5. **Data Modelling**: Trained a machine learning model using scikit-learn to predict diabetes.
-6. **Model Evaluation**: Assessed the model's performance using various metrics to ensure accuracy.
-7. **Model Deployment**: Deployed the model as a web application using Flask, hosted on Heroku.
+1. **Data preparation** — gather and inspect the dataset.
+2. **Exploratory analysis** — examine distributions and relationships between health indicators.
+3. **Preprocessing** — clean and transform data for modelling.
+4. **Model training** — build a classification model with scikit-learn.
+5. **Evaluation** — assess model performance using classification metrics.
+6. **Web interface** — collect inputs through a Flask application and display the prediction.
 
-## Technical Aspects
+## Technology
 
-### Machine Learning Model
-- **Library**: scikit-learn
-- **Algorithms Used**: Logistic Regression, Decision Trees, Random Forests (or any chosen algorithms based on your project)
-- **Input Features**: The following fields are taken from the user:
-  - Number of Pregnancies
-  - Insulin Level
-  - Age
-  - Body Mass Index (BMI)
-  - Blood Pressure
-  - Glucose Level
-  - Skin Thickness
-  - Diabetes Pedigree Function
-- **Output**: The model predicts whether the person is likely to have diabetes (Yes/No).
-
-### Web Application
-- **Framework**: Flask
-- **Deployment**: Hosted on Heroku for easy access.
-- **Functionality**: 
-  - The user provides health-related data via a form.
-  - After submitting the form, the model processes the data and presents the prediction on a new page.
-  
-## How to Use
-
-### Prerequisites
-- Python 3.x
-- Flask
+- Python
+- pandas
 - scikit-learn
-- Pandas
-- Heroku CLI (for deployment)
+- Flask
 
-### Installation
+## Run locally
 
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/shsarv/Machine-learning-projects.git
-   cd diabetes-prediction-[End-2-END]/Diabetes-prediction-deployed
-   ```
+The application entry point is `app.py`.
 
-2. Install the required dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
+```bash
+git clone https://github.com/arpitaengineer08-source/DiaCheck.git
+cd DiaCheck
+pip install -r requirements.txt
+python app.py
+```
 
-3. Run the Flask app:
-   ```bash
-   python app.py
-   ```
+Open the local URL printed by Flask in your terminal (commonly `http://127.0.0.1:5000`).
 
-4. Open your browser and go to `http://localhost:5000` to access the web app.
+## Input features
 
-### Deployment on Heroku
+| Feature | Description |
+|---|---|
+| Pregnancies | Number of pregnancies |
+| Glucose | Glucose measurement |
+| Blood pressure | Blood pressure measurement |
+| Skin thickness | Skin-fold thickness |
+| Insulin | Insulin measurement |
+| BMI | Body mass index |
+| Diabetes pedigree function | Dataset-provided family-history indicator |
+| Age | Age in years |
 
-To deploy the app on Heroku, follow these steps:
+Use the exact feature order and preprocessing expected by the model files in this repository.
 
-1. Login to Heroku:
-   ```bash
-   heroku login
-   ```
+## Scope and limitations
 
-2. Create a new Heroku app:
-   ```bash
-   heroku create your-app-name
-   ```
+- Model predictions depend on the training dataset and its representativeness.
+- Performance on a public dataset does not establish clinical validity.
+- This project is intended for learning and demonstration only.
 
-3. Push your code to Heroku:
-   ```bash
-   git push heroku main
-   ```
+## Author
 
-4. Open the app in your browser:
-   ```bash
-   heroku open
-   ```
-
-## Future Enhancements
-
-- Add more advanced machine learning models for improved prediction accuracy.
-- Implement user authentication for a more personalized experience.
-- Improve UI/UX for better usability.
-- Integrate more health-related data for broader insights.
-
-## Contributing
-
-Feel free to contribute by submitting issues or pull requests. For major changes, please open an issue first to discuss what you'd like to change.
-
-## Acknowledgments
-
-- [Scikit-learn Documentation](https://scikit-learn.org/stable/documentation.html)
-- [Flask Documentation](https://flask.palletsprojects.com/)
-- [Heroku Documentation](https://devcenter.heroku.com/)
-
----
+**Arpita Sharma** — B.Tech, Computer Science and Engineering (Data Science & AI)
